@@ -21,13 +21,15 @@ export class DetailPage {
 
   constructor(public tts: TextToSpeech,public camera:Camera , public navCtrl: NavController, public navParams: NavParams) {
   }
+  textS(){
+    this.tts.speak(this.text)
+  .then(() => console.log('Success'))
+  .catch((reason: any) => console.log(reason));
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
   }
-
-
-
 
   connCamera(){
     const options: CameraOptions = {
