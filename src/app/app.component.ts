@@ -2,8 +2,13 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { doraemonPage } from '../pages/doraemon/doraemon';
 
+import { CartoonPage } from '../pages/Cartoon/Cartoon';
+import { pokemonPage } from '../pages/pokemon/pokemon';
+import { digimonPage } from '../pages/digimon/digimon';
 import { HomePage } from '../pages/home/home';
+
 @Component({
   templateUrl: 'app.html'
 })

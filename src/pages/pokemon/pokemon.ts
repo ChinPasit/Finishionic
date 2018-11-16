@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 
-
 /**
  * Generated class for the DetailPage page.
  *
@@ -13,16 +12,15 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @IonicPage()
 @Component({
-  selector: 'page-detail',
-  templateUrl: 'detail.html',
+  selector: 'page-pokemon',
+  templateUrl: 'pokemon.html',
 })
-export class DetailPage {
+export class pokemonPage {
   a:any;
   text:any;
 
   constructor(public tts: TextToSpeech,public camera:Camera , public navCtrl: NavController, public navParams: NavParams) {
   }
- 
   textS(){
     this.tts.speak(this.text)
   .then(() => console.log('Success'))
@@ -30,7 +28,7 @@ export class DetailPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailPage');
+    console.log('ionViewDidLoad pokemonPage');
   }
 
   connCamera(){

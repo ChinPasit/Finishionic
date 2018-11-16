@@ -7,16 +7,24 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetailPage } from '../pages/detail/detail';
+import { CartoonPage } from '../pages/Cartoon/Cartoon';
+import { doraemonPage } from '../pages/doraemon/doraemon';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { pokemonPage } from '../pages/pokemon/pokemon';
+import { digimonPage } from '../pages/digimon/digimon';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DetailPage
+    DetailPage,
+    CartoonPage,
+    doraemonPage,
+    pokemonPage,
+    digimonPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +34,11 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
   entryComponents: [
     MyApp,
     HomePage,
-    DetailPage
+    DetailPage,
+    CartoonPage,
+    doraemonPage,
+    pokemonPage,
+    digimonPage
   ],
   providers: [
     StatusBar,

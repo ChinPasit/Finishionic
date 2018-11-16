@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-
+import { doraemonPage } from '../doraemon/doraemon';
+import { pokemonPage } from '../pokemon/pokemon';
+import { digimonPage } from '../digimon/digimon';
 
 /**
  * Generated class for the DetailPage page.
@@ -13,16 +15,24 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @IonicPage()
 @Component({
-  selector: 'page-detail',
-  templateUrl: 'detail.html',
+  selector: 'page-Cartoon',
+  templateUrl: 'Cartoon.html',
 })
-export class DetailPage {
+export class CartoonPage {
   a:any;
   text:any;
 
   constructor(public tts: TextToSpeech,public camera:Camera , public navCtrl: NavController, public navParams: NavParams) {
   }
- 
+  next(){
+    this.navCtrl.push(doraemonPage)
+  }
+  next_pokemon(){
+    this.navCtrl.push(pokemonPage)
+  }
+  next_digimon(){
+    this.navCtrl.push(digimonPage)
+  }
   textS(){
     this.tts.speak(this.text)
   .then(() => console.log('Success'))
@@ -30,7 +40,7 @@ export class DetailPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailPage');
+    console.log('ionViewDidLoad CartoonPage');
   }
 
   connCamera(){

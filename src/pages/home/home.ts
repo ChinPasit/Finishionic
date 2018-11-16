@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { DetailPage } from '../detail/detail';
+//import { DetailPage } from '../detail/detail';
+import { CartoonPage } from '../Cartoon/Cartoon';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,7 @@ export class HomePage {
   }
 next(){
   if(this.id=="admin"&&this.pass=="1234"){
-      this.navCtrl.push(DetailPage)
+      this.navCtrl.push(CartoonPage)
   }
   else {
     alert("Username and Paseeword Error !!!");
